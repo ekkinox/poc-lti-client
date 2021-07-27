@@ -31,7 +31,6 @@ class ServiceClientTest extends TestCase
 
         $handlerStack = HandlerStack::create();
 
-
         $handlerStack->push(
             Middleware::mapRequest(function (RequestInterface $request) {
                 return $request->withHeader('X-Foo', 'bar');
