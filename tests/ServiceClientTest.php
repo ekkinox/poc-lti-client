@@ -45,7 +45,7 @@ class ServiceClientTest extends TestCase
         $this->client = new ScoreServiceClient($ltiServiceClient);
     }
 
-    public function testHeaders(): void
+    public function testScoreServiceClientHeadersContainsMiddlewareOnes(): void
     {
         $registration = $this->createTestRegistration();
         $lineItem = $this->createTestLineItem();
