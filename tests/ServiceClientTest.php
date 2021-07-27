@@ -60,6 +60,7 @@ class ServiceClientTest extends TestCase
         /** @var Request $sentRequest */
         $sentRequest = current($this->history)['request'];
 
+        $this->assertEquals($registration->getPlatform()->getOAuth2AccessTokenUrl(), $sentRequest->getUri()->__toString());
         $this->assertEquals('bar', $sentRequest->getHeaderLine('X-Foo'));
     }
 }
